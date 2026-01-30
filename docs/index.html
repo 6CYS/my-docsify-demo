@@ -6,6 +6,145 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  
+  <!-- 高级侧边栏样式 -->
+  <style>
+    /* 侧边栏整体背景 - 玻璃态效果 */
+    .sidebar {
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%) !important;
+      border-right: 1px solid rgba(148, 163, 184, 0.2) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.04) !important;
+    }
+    
+    /* 侧边栏导航容器 */
+    .sidebar-nav {
+      padding: 20px 0 !important;
+    }
+    
+    /* 侧边栏标题样式 */
+    .sidebar-nav h3,
+    .sidebar-nav h4,
+    .sidebar-nav strong {
+      color: #1e293b !important;
+      font-weight: 700 !important;
+      font-size: 13px !important;
+      text-transform: uppercase !important;
+      letter-spacing: 1.5px !important;
+      margin: 25px 0 12px 0 !important;
+      padding: 0 20px !important;
+      opacity: 0.8;
+    }
+    
+    /* 分隔线样式 */
+    .sidebar-nav hr {
+      border: none !important;
+      height: 1px !important;
+      background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.3), transparent) !important;
+      margin: 20px 0 !important;
+    }
+    
+    /* 链接基础样式 */
+    .sidebar-nav a {
+      color: #475569 !important;
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      padding: 10px 20px 10px 28px !important;
+      border-radius: 0 8px 8px 0 !important;
+      margin: 2px 16px 2px 0 !important;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      display: flex !important;
+      align-items: center !important;
+      text-decoration: none !important;
+    }
+    
+    /* 链接悬停效果 */
+    .sidebar-nav a:hover {
+      color: #3b82f6 !important;
+      background: linear-gradient(90deg, rgba(59, 130, 246, 0.08) 0%, rgba(59, 130, 246, 0.02) 100%) !important;
+      transform: translateX(4px) !important;
+    }
+    
+    /* 当前页面激活状态 */
+    .sidebar-nav li.active > a,
+    .sidebar-nav a.active {
+      color: #2563eb !important;
+      background: linear-gradient(90deg, rgba(37, 99, 235, 0.12) 0%, rgba(37, 99, 235, 0.04) 100%) !important;
+      border-left: 3px solid #2563eb !important;
+      font-weight: 600 !important;
+    }
+    
+    /* 子菜单链接 */
+    .sidebar-nav ul ul a {
+      font-size: 13px !important;
+      color: #64748b !important;
+      padding-left: 44px !important;
+      font-weight: 400 !important;
+    }
+    
+    .sidebar-nav ul ul a:hover {
+      color: #3b82f6 !important;
+    }
+    
+    /* 侧边栏底部信息卡片 */
+    .sidebar-nav div[align="center"] {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      border-radius: 12px !important;
+      padding: 20px !important;
+      margin: 20px 16px !important;
+      box-shadow: 0 10px 40px -10px rgba(102, 126, 234, 0.4) !important;
+    }
+    
+    .sidebar-nav div[align="center"] * {
+      color: white !important;
+    }
+    
+    /* 搜索框美化 */
+    .sidebar .search {
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2) !important;
+      padding: 20px !important;
+    }
+    
+    .sidebar .search input {
+      background: white !important;
+      border: 1px solid rgba(148, 163, 184, 0.3) !important;
+      border-radius: 8px !important;
+      padding: 10px 14px !important;
+      font-size: 14px !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.2s ease !important;
+    }
+    
+    .sidebar .search input:focus {
+      border-color: #3b82f6 !important;
+      box-shadow: 0 2px 12px rgba(59, 130, 246, 0.15) !important;
+      outline: none !important;
+    }
+    
+    /* 移动端侧边栏 */
+    @media (max-width: 768px) {
+      .sidebar {
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.15) !important;
+      }
+    }
+    
+    /* 滚动条美化 */
+    .sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .sidebar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    .sidebar::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.4);
+      border-radius: 3px;
+    }
+    
+    .sidebar::-webkit-scrollbar-thumb:hover {
+      background: rgba(148, 163, 184, 0.6);
+    }
+  </style>
 </head>
 <body>
   <div id="app">加载中...</div>
