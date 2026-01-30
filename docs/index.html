@@ -5,11 +5,20 @@
   <title>我的个人文档站</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
   <style>
-    /* 自定义样式 */
     :root {
+      /* Simple 主题配色 */
+      --base-color: #34495e;
       --theme-color: #42b983;
+      --base-background-color: #ffffff;
+      --code-inline-color: #e96900;
+      --code-inline-background: #f8f8f8;
+      --code-font-family: "Roboto Mono", Monaco, courier, monospace;
+      --cover-background-color: #42b983;
+      --cover-button-background: #ffffff;
+      --cover-button-color: #34495e;
+      --cover-button-color--hover: #42b983;
     }
   </style>
 </head>
@@ -71,6 +80,9 @@
       }
     }
   </script>
+  
+  <!-- Docsify Themeable (必须在 docsify 之前加载) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
   
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
